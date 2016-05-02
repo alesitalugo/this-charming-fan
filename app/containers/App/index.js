@@ -11,19 +11,18 @@ import React from 'react'
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css'
 
-import Img from 'components/Img'
+import Poster from 'components/Poster'
 import Footer from 'components/Footer'
 import Banner from './morrissey.png'
-import A from 'components/A'
 
 import styles from './styles.css'
 
 function App(props) {
   return (
     <div className={styles.wrapper}>
-      <A className={styles.logoWrapper} href="https://github.com/alesitalugo/this-charming-fan">
-        <Img className={styles.logo} src={Banner} alt="This Charming Fan" />
-      </A>
+      <a className={styles.logoWrapper} href="https://github.com/alesitalugo/this-charming-fan">
+        <Poster className={styles.logo} src={Banner} alt="This Charming Fan" />
+      </a>
       {props.children}
       <Footer />
     </div>

@@ -10,7 +10,7 @@
  *   return state.set('yourStateVariable', true)
  */
 
-import { LOAD_REPOS_SUCCESS, LOAD_REPOS, LOAD_REPOS_ERROR,
+import { LOAD_CHARMING_FAN, LOAD_CHARMING_FAN_ERROR, LOAD_CHARMING_FAN_SUCCESS,
 } from './constants'
 import { fromJS } from 'immutable'
 
@@ -20,23 +20,23 @@ const initialState = fromJS({
   error: false,
   currentUser: false,
   userData: fromJS({
-    repositories: false,
+    fan: false,
   }),
 })
 
 function homeReducer(state = initialState, action) {
   switch (action.type) {
-    case LOAD_REPOS:
+    case LOAD_CHARMING_FAN:
       return state
         .set('loading', true)
         .set('error', false)
-        .setIn(['userData', 'repositories'], false)
-    case LOAD_REPOS_SUCCESS:
+        .setIn(['userData', 'fan'], false)
+    case LOAD_CHARMING_FAN_SUCCESS:
       return state
-        .setIn(['userData', 'repositories'], action.repos)
+        .setIn(['userData', 'fan'], action.fan)
         .set('loading', false)
         .set('currentUser', action.username)
-    case LOAD_REPOS_ERROR:
+    case LOAD_CHARMING_FAN_ERROR:
       return state
         .set('error', action.error)
         .set('loading', false)

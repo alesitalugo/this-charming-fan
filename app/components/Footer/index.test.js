@@ -3,7 +3,6 @@ import { shallow } from 'enzyme'
 import React from 'react'
 
 import Footer from './index'
-import A from 'components/A'
 
 describe('<Footer />', () => {
   it('should render the copyright notice', () => {
@@ -24,7 +23,7 @@ describe('<Footer />', () => {
     expect(renderedComponent.contains(
       <section>
         <p>
-          Made with love by <A href="https://github.com/luciernagale">Alesita</A> && <A href="https://github.com/rogr">Rogelio</A>.
+          Made with love by <a href="https://github.com/luciernagale">Alesita</a> && <a href="https://github.com/rogr">Rogelio</a>.
         </p>
       </section>
     )).toEqual(true)
