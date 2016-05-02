@@ -20,14 +20,10 @@ import {
 } from './actions'
 
 import {
-  loadRepos,
+  loadCharmingFan,
 } from '../App/actions'
 
-/* import Button from 'components/Button'
-import H2 from 'components/H2'
-import List from 'components/List'
-import ListItem from 'components/ListItem'
-import LoadingIndicator from 'components/LoadingIndicator' */
+// import LoadingIndicator from 'components/LoadingIndicator'
 
 // import styles from './styles.css'
 
@@ -89,7 +85,7 @@ function mapDispatchToProps(dispatch) {
     changeRoute: (url) => dispatch(push(url)),
     onSubmitForm: (evt) => {
       evt.preventDefault()
-      dispatch(loadRepos())
+      dispatch(loadCharmingFan())
     },
 
     dispatch,

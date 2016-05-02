@@ -15,32 +15,32 @@
  *    }
  */
 
-import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR,
+import { LOAD_CHARMING_FAN, LOAD_CHARMING_FAN_ERROR, LOAD_CHARMING_FAN_SUCCESS,
 } from './constants'
 
 /**
- * Load the repositories, this action starts the getGithubData saga
+ * Load the Fan, this action starts the getGithubData saga
  *
- * @return {object} An action object with a type of LOAD_REPOS
+ * @return {object} An action object with a type of LOAD_CHARMING_FAN
  */
-export function loadRepos() {
+export function loadCharmingFan() {
   return {
-    type: LOAD_REPOS,
+    type: LOAD_CHARMING_FAN,
   }
 }
 
 /**
  * Dispatched when the repositories are loaded by the getGithubData saga
  *
- * @param  {array} repos The repository data
+ * @param  {array} fan The fan data
  * @param  {string} username The current username
  *
- * @return {object} An action object with a type of LOAD_REPOS_SUCCESS passing the repos
+ * @return {object} An action object with a type of LOAD_CHARMING_FAN_SUCCESS passing the fan data
  */
-export function reposLoaded(repos, username) {
+export function charmingFanLoaded(fan, username) {
   return {
-    type: LOAD_REPOS_SUCCESS,
-    repos,
+    type: LOAD_CHARMING_FAN_SUCCESS,
+    fan,
     username,
   }
 }
@@ -50,11 +50,11 @@ export function reposLoaded(repos, username) {
  *
  * @param  {object} error The error
  *
- * @return {object} An action object with a type of LOAD_REPOS_ERROR passing the error
+ * @return {object} An action object with a type of LOAD_CHARMING_FAN_ERROR passing the error
  */
-export function repoLoadingError(error) {
+export function charmingFanError(error) {
   return {
-    type: LOAD_REPOS_ERROR,
+    type: LOAD_CHARMING_FAN_ERROR,
     error,
   }
 }

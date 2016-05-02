@@ -1,6 +1,5 @@
 import React from 'react'
 
-import A from 'components/A'
 import styles from './styles.css'
 
 function Footer() {
@@ -13,7 +12,7 @@ function Footer() {
       </section>
       <section>
         <p>
-          Made with love by <A href="https://github.com/luciernagale">Alesita</A> && <A href="https://github.com/rogr">Rogelio</A>.
+          Made with love by <a href="https://github.com/luciernagale">Alesita</a> && <a href="https://github.com/rogr">Rogelio</a>.
         </p>
       </section>
     </footer>
